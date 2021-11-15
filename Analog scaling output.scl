@@ -1,7 +1,21 @@
 ﻿FUNCTION_BLOCK "Analog scaling output"
 { S7_Optimized_Access := 'TRUE' }
 VERSION : 0.1
+   VAR_INPUT 
+      In1 : Bool;
+      In2 : Bool;
+   END_VAR
+
+   VAR_OUTPUT 
+      Out20 : Bool;
+   END_VAR
+
 
 BEGIN
+	IF #In1 AND NOT #In2 THEN
+	    // Statement section IF
+	    #Out20 := true;
+	END_IF;
+	
 END_FUNCTION_BLOCK
 
